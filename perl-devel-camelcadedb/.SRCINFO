@@ -1,0 +1,18 @@
+pkgbase = perl-devel-camelcadedb
+	pkgdesc = Perl side of the Perl debugger for IntelliJ IDEA and other JetBrains IDE
+	pkgver = 2019.1
+	pkgrel = 1
+	url = https://metacpan.org/release/Devel-Camelcadedb
+	arch = any
+	license = MIT
+	depends = perl-hash-storediterator>=0
+	depends = perl-json-xs>=3.02
+	depends = perl-padwalker>=2.2
+	depends = perl>=5.008
+	options = !emptydirs
+	options = purge
+	source = https://cpan.metacpan.org/authors/id/H/HU/HURRICUP/Devel-Camelcadedb-v2019.1.tar.gz
+	sha256sums = 91cd5d51384559b6821fc61768341f57443208a871461902a400d449c0e53f94
+
+pkgname = perl-devel-camelcadedb
+
