@@ -1,0 +1,16 @@
+pkgbase = cht.sh
+	pkgdesc = The only cheat sheet you need (command line client for cheat.sh)
+	pkgver = 6
+	pkgrel = 1
+	url = https://cheat.sh/
+	arch = any
+	license = MIT
+	depends = bash
+	depends = curl
+	depends = xsel
+	depends = rlwrap
+	source = cht-6-1.sh::https://cht.sh/:cht.sh
+	sha256sums = b9062db9a86d5aefdb613a8c945632ac9a12f24f89035809ade14c072e4d36ff
+
+pkgname = cht.sh
+
