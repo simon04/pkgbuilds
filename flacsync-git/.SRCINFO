@@ -1,7 +1,7 @@
 pkgbase = flacsync-git
 	pkgdesc = Recursively mirror a directory tree of FLAC audio files to AAC/OGG
 	pkgver = 0.3.2.r4.gfe95e74
-	pkgrel = 3
+	pkgrel = 4
 	url = https://github.com/cmcginty/flacsync
 	arch = any
 	license = GPL
@@ -18,7 +18,9 @@ pkgbase = flacsync-git
 	provides = flacsync
 	conflicts = flacsync
 	source = flacsync-git::git+https://github.com/cmcginty/flacsync.git
-	md5sums = SKIP
+	source = 0001-OggEncoder-specify-list-args-for-subprocess.call.patch
+	sha256sums = SKIP
+	sha256sums = 7f8f12d32f1627e16e05a51aaa23e8610d70f2fb8cead622b607803b9caee19c
 
 pkgname = flacsync-git
 
