@@ -5,13 +5,13 @@ pkgver() {
   cd "$pkgname"
   git describe --long --tags | sed -r 's/^v//;s/([^-]*-g)/r\1/;s/-/./g'
 }
-pkgrel=2
+pkgrel=4
 pkgdesc="Recursively mirror a directory tree of FLAC audio files to AAC/OGG"
 url="https://github.com/cmcginty/flacsync"
 arch=('any')
 license=('GPL')
-depends=('python2' 'python-imaging' 'mutagen' 'flac')
-makedepends=('git' 'python2-distribute')
+depends=('python2' 'python2-setuptools' 'python2-pillow' 'python2-mutagen' 'flac')
+makedepends=('git')
 optdepends=('neroaacenc: AAC encoding'
             'neroaactag: AAC tagging'
             'vorbis-tools: OGG Vorbis encoding and tagging'
@@ -19,8 +19,15 @@ optdepends=('neroaacenc: AAC encoding'
 )
 provides=('flacsync')
 conflicts=('flacsync')
-source=("$pkgname::git+https://github.com/cmcginty/flacsync.git")
-md5sums=('SKIP')
+source=("$pkgname::git+https://github.com/cmcginty/flacsync.git"
+        "0001-OggEncoder-specify-list-args-for-subprocess.call.patch")
+sha256sums=('SKIP'
+            '7f8f12d32f1627e16e05a51aaa23e8610d70f2fb8cead622b607803b9caee19c')
+
+prepare() {
+  cd "$pkgname"
+  patch -p1 < "$srcdir/0001-OggEncoder-specify-list-args-for-subprocess.call.patch"
+}
 
 package() {
   cd "$pkgname"
