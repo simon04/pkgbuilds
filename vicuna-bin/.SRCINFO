@@ -1,0 +1,18 @@
+pkgbase = vicuna-bin
+	pkgdesc = Tool for uploading files to Wikimedia Commons and other Wikimedia projects
+	pkgver = 1.23
+	pkgrel = 2
+	url = https://yarl.github.io/vicuna/
+	arch = any
+	license = Apache
+	depends = java-runtime
+	provides = vicuna
+	source = https://github.com/yarl/vicuna/releases/download/1.23/vicuna-1.23.zip
+	source = https://raw.githubusercontent.com/yarl/vicuna/1.23/src/cuploader/resources/logo.png
+	source = vicuna.desktop
+	sha256sums = 534fdf699719d40a9c1c6edb41fa93bcbd1bb83be38e004c8afa8731a798f587
+	sha256sums = 6a9fa5bb5e7ef85b8db08560c7c4460e7ff4c15a9b97a016a10c867ba4ee4725
+	sha256sums = bc6f47e7600117e859c7b7956e28959b03eb5dd8a8eff4318fb4047ecc7cfa42
+
+pkgname = vicuna-bin
+
