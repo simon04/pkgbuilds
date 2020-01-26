@@ -1,0 +1,26 @@
+pkgbase = libosmium
+	pkgdesc = Fast and flexible C++ library for working with OpenStreetMap data.
+	pkgver = 2.15.4
+	pkgrel = 1
+	url = http://osmcode.org/libosmium/
+	arch = any
+	license = custom
+	makedepends = cmake
+	depends = expat
+	depends = zlib
+	depends = bzip2
+	depends = boost
+	depends = boost-libs
+	depends = protozero
+	optdepends = sparsehash: sparse-mem-table index map
+	optdepends = gdal: convert OSM geometries into OGR geometries
+	optdepends = geos: convert OSM geometries into GEOS geometries
+	optdepends = proj: project OSM coordinates into spatial reference systems
+	optdepends = doxygen: build Libosmium API documentation
+	provides = libosmium
+	conflicts = libosmium-git
+	source = libosmium-2.15.4.tar.gz::https://github.com/osmcode/libosmium/archive/v2.15.4.tar.gz
+	sha256sums = 402247f7764bc20c061fa7d9fad15fc85459b7ce4f420274de78c94d05ddf260
+
+pkgname = libosmium
+
